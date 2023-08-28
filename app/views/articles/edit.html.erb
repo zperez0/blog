@@ -23,3 +23,9 @@
     <%= f.submit %>
   </p>
 <% end %>
+
+  <%= link_to 'Article list', articles_path %> |
+
+  <%= link_to 'Delete', article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> |
+
+  <%= link_to "#{@article.title} details", article_path(@article)%>
